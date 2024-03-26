@@ -1,4 +1,6 @@
 ---
+import Navigation from '../components/Navigation.astro';
+
 const pageTitle = "Inicio";
 ---
 
@@ -11,9 +13,7 @@ const pageTitle = "Inicio";
         <title>{pageTitle}</title>
 	</head>
 	<body>
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/blog/">Blog</a>
+        <Navigation />
 
 		<div class="container mx-auto 2xl">
             <h1 class="text-3xl font-bold underline mt-2">{pageTitle}</h1>
