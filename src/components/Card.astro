@@ -2,20 +2,17 @@
 const { nombre, descripcion, imagen } = Astro.props;
 ---
 
-<div class="bg-white h-full">
-    <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80" >
-        <img
-            src={imagen}
-            alt="Front of men's Basic Tee in black."
-            class="h-full w-full object-cover object-center lg:h-full lg:w-full"
-        />
-    </div>
-    <div class="mt-4 flex justify-between">
-        <div>
-            <h3 class="text-sm text-gray-700">
-                <a href="#"> <strong class="text-lg">{nombre}</strong> </a>
-            </h3>
-            <p class="mt-1 text-sm text-gray-500">{descripcion}</p>
+<div class="bg-white h-full border rounded-lg shadow-lg hover:shadow-2xl">
+    <a class="block" href="/aboutDetalle">
+        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80" >
+            <img src={imagen} alt={nombre} class="h-full w-full object-cover object-center lg:h-full lg:w-full" />
         </div>
-    </div>
+        <div class="mt-4 flex justify-between p-6">
+            <div>
+                <h3 class="text-sm text-gray-700"> <a href="#"> <strong class="text-lg">{nombre}</strong> </a> </h3>
+                <hr class="my-6">
+                <p class="mt-1 text-sm text-gray-500">{descripcion}</p>
+            </div>
+        </div>
+    </a>
 </div>

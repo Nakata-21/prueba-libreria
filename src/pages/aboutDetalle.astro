@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../layouts/detalleProducto.astro';
+import "../styles/global.css";
+
+const pageTitle = "Tienda";
+
+const response = await fetch("https://fakestoreapi.com/products");
+const data = await response.json();
+const datos = data;
+---
+
+<BaseLayout pageTitle={pageTitle} nombre={datos[0].title} descripcion={datos[0].description} imagen={datos[0].image} precio={datos[0].price + '€'}></BaseLayout>
+
+<script>import "preline/dist/preline.js";</script>
