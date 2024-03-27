@@ -1,6 +1,7 @@
 ---
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
+import Hero from "../components/Hero.astro";
 import Card from "../components/Card.astro";
 import "../styles/global.css";
 
@@ -22,20 +23,24 @@ const datos = data;
     <body>
         <Navigation />
 
+        <Hero />
+
         <div class="container mx-auto max-w-7xl px-2 lg:px-8 mt-12">
             <h1 class="text-3xl font-bold underline mt-2">{pageTitle}</h1>
         </div>
 
         <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-        <div class="mt-6 grid grid-cols-1 gap-x-14 gap-y-20 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 ">
-            {datos.map(producto => (
-                <fragment key={producto.id}> {/* Asegúrate de tener una clave única para cada elemento */}
-                    <Card imagen={producto.image} nombre={producto.title} descripcion={producto.description} />
-                </fragment>
-            ))}
-        </div>
+            <div class="mt-6 grid grid-cols-1 gap-x-14 gap-y-20 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 ">
+                {datos.map(producto => (
+                    <fragment key={producto.id}> {/* Asegúrate de tener una clave única para cada elemento */}
+                        <Card imagen={producto.image} nombre={producto.title} descripcion={producto.description} />
+                    </fragment>
+                ))}
+            </div>
         </div>
 
         <Footer />
     </body>
 </html>
+
+<script>import "preline/dist/preline.js";</script>
