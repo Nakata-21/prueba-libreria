@@ -11,11 +11,7 @@ const data = await response.json();
 
 <MainLayout pageTitle={pageTitle}>
 
-    <div class="container mx-auto max-w-7xl px-2 lg:px-8">
-        <h1 class="text-3xl font-bold underline mt-2">{pageTitle}</h1>
-    </div>
-
-    <div class="container px-4 mx-auto pb-12 py-16">
+    <div class="container px-4 mx-auto pt-28 pb-40">
         <div class="mt-6 grid grid-cols-1 gap-x-14 gap-y-20 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8" >
             {
                 data.map((producto) => (

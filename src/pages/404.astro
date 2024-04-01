@@ -1,0 +1,24 @@
+---
+import MainLayout from "../layouts/mainLayout.astro";
+import "../styles/global.css";
+
+import { Image } from 'astro:assets';
+import imagenError from "../../public/img/errores/404.svg";
+
+const pageTitle = "Error 404";
+---
+
+<MainLayout pageTitle={pageTitle}>
+    <div class="container px-4 mx-auto">
+        <div class="py-40 text-center">
+            <Image src={imagenError} alt="Imagen de error" class="mx-auto"/>
+            <hr class="my-6">
+            <p class="text-3xl mb-3"><strong>La página a la que has intentado acceder <span class="text-violet-700">no existe.</span></strong></p>
+            <p>Haz click <a class="text-violet-700" href="/"><strong>aquí</strong></a> para volver al inicio.</p>
+        </div>
+    </div>
+</MainLayout>
+
+<script>
+    import "preline/dist/preline.js";
+</script>

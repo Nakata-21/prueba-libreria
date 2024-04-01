@@ -32,7 +32,7 @@ const { producto } = Astro.props;
               </li>
               <li>
                 <div class="flex items-center">
-                  <a href="/about" class="mr-2 text-sm font-medium text-gray-900">Clothing</a>
+                  <a href="/tienda" class="mr-2 text-sm font-medium text-gray-900">Clothing</a>
                   <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" aria-hidden="true" class="h-5 w-4 text-gray-300">
                     <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
                   </svg>
@@ -74,7 +74,7 @@ const { producto } = Astro.props;
             <!-- Options -->
             <div class="mt-4 lg:row-span-3 lg:mt-0">
               <h2 class="sr-only">{producto.description}</h2>
-              <p class="text-3xl tracking-tight text-gray-900">{producto.price}</p>
+              <p class="text-3xl tracking-tight text-gray-900">{producto.price + ' €'}</p>
       
               <!-- Reviews -->
               <div class="mt-6">
@@ -264,10 +264,10 @@ const { producto } = Astro.props;
               </div>
       
               <div class="mt-10">
-                <h2 class="text-sm font-medium text-gray-900">Details</h2>
+                <h2 class="text-sm font-medium text-gray-900">Categoría</h2>
       
                 <div class="mt-4 space-y-6">
-                  <p class="text-sm text-gray-600">The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming &quot;Charcoal Gray&quot; limited release.</p>
+                  <p class="text-sm text-gray-600">{producto.category}</p>
                 </div>
               </div>
             </div>
