@@ -1,9 +1,8 @@
 ---
-const { nombre, descripcion, imagen } = Astro.props;
+const { nombre, descripcion, imagen, id } = Astro.props;
 ---
 
 <div class="bg-white h-full border rounded-lg shadow-lg hover:shadow-2xl">
-    <a class="block" href="/aboutDetalle">
         <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80" >
             <img src={imagen} alt={nombre} class="h-full w-full object-cover object-center lg:h-full lg:w-full" />
         </div>
@@ -14,5 +13,4 @@ const { nombre, descripcion, imagen } = Astro.props;
                 <p class="mt-1 text-sm text-gray-500">{descripcion}</p>
             </div>
         </div>
-    </a>
 </div>

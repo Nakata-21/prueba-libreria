@@ -1,6 +1,5 @@
 ---
-import Navigation from "../components/Navigation.astro";
-import Footer from "../components/Footer.astro";
+import MainLayout from "../layouts/mainLayout.astro";
 import Hero from "../components/Hero.astro";
 import Toast from "../components/Toast.astro";
 import "../styles/global.css";
@@ -8,16 +7,7 @@ import "../styles/global.css";
 const pageTitle = "Inicio";
 ---
 
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <title>{pageTitle}</title>
-    </head>
-    <body>
-        <Navigation />
+        <MainLayout pageTitle={pageTitle}>
 
         <Hero />
 
@@ -159,11 +149,9 @@ const pageTitle = "Inicio";
 
         
 
-        <Footer />
-
         <Toast />
-    </body>
-</html>
+
+</MainLayout>
 
 <script>
     import "preline/dist/preline.js";
