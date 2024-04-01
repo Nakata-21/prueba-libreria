@@ -1,4 +1,6 @@
 ---
+import Search from "astro-pagefind/components/Search";
+
 import MainLayout from "../layouts/mainLayout.astro";
 import Card from "../components/Card.astro";
 import "../styles/global.css";
@@ -12,6 +14,8 @@ const data = await response.json();
 <MainLayout pageTitle={pageTitle}>
 
     <div class="container px-4 mx-auto pt-28 pb-40">
+        <Search id="search" className="pagefind-ui" uiOptions={{ showImages: false }} />
+        
         <div class="mt-6 grid grid-cols-1 gap-x-14 gap-y-20 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8" >
             {
                 data.map((producto) => (
