@@ -16,7 +16,7 @@ const data = await response.json();
     <div class="container px-4 mx-auto pt-28 pb-40">
         <Search id="search" className="pagefind-ui" uiOptions={{ showImages: false }} />
         
-        <div class="mt-6 grid grid-cols-1 gap-x-14 gap-y-20 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8" >
+        <div class="mt-6 grid grid-cols-1 gap-x-8 gap-y-20 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8" >
             {
                 data.map((producto) => (
                     <fragment key={producto.id}>{" "}
