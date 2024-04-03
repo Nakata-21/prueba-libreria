@@ -4,6 +4,7 @@ import { ViewTransitions } from "astro:transitions";
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
+import {SITE_DESCRIPTION, SITE_TITLE} from '../constants'
 
 const { pageTitle } = Astro.props;
 ---
@@ -14,7 +15,8 @@ const { pageTitle } = Astro.props;
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
-        <title>{pageTitle}</title>
+        <meta name="description" content={SITE_DESCRIPTION}>
+        <title>{SITE_TITLE} - {pageTitle}</title>
         <ViewTransitions />
     </head>
     <body>
@@ -23,4 +25,3 @@ const { pageTitle } = Astro.props;
         <Footer />
     </body>
 </html>
-
